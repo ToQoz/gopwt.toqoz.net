@@ -44,10 +44,8 @@ function execute(window, document, code) {
   window.console.error = function(a) {
     out.textContent += a + "\n";
   };
+  out.textContent = "";
   var script = document.createElement("script")
-  script.onload = function() {
-    out.textContent = "";
-  };
   script.src = "/sandbox.js?code=" + encodeURIComponent(code);
   document.body.appendChild(script);
 }
