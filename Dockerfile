@@ -1,4 +1,4 @@
-FROM golang:1.7.1
+FROM golang:1.9
 
 RUN go get github.com/ToQoz/gopwt/...
 RUN go get github.com/gopherjs/gopherjs
